@@ -3,23 +3,27 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Барбершоп</title>
+    <link href="img/favicon.png" rel="icon" type="image/x-icon">
+    <link href='https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
     <header class="main-header">
-      <div class="container">
+      <div class="container clearfix">
         <nav class="main-navigation">
           <ul>
             <li>
-              <a href="#">Информация</a>
+              <a href="#" class="active">Информация</a>
             </li>
             <li>
               <a href="#">Новости</a>
             </li>
             <li>
-              <a href="#">Прайс-лист</a>
+              <a href="price.html">Прайс-лист</a>
             </li>
             <li>
-              <a href="#">Магазин</a>
+              <a href="catalog.html">Магазин</a>
             </li>
             <li>
               <a href="#">Контакты</a>
@@ -31,11 +35,11 @@
         </div>
       </div>
     </header>
-    <main class="container">
+    <div class="container">
       <div class="index-logo">
-        <img src="img/index-logo.png" width="368" height="204" alt="Барбершоп «Бородинский»">
+          <img src="img/BORODINSKI-Logo.png" width="368" height="204" alt="Барбершоп «Бородинский»">
       </div>
-      <section class="features">
+      <section class="features clearfix">
         <div class="features-item">
           <b class="features-name">Быстро</b>
           <p>Мы делаем свою работу быстро! Два часа пролетят незаметно и вы — счастливый обладатель стильной стрижки-минутки!</p>
@@ -49,7 +53,7 @@
           <p>Наши мастера — профессионалы своего дела и не могут стоить дешево. К тому же, разве цена не дает определенный статус?</p>
         </div>
       </section>
-      <div class="index-content">
+      <div class="index-content clearfix">
         <div class="index-content-left">
           <h2 class="index-content-title">Новости</h2>
           <ul class="news-preview">
@@ -68,14 +72,14 @@
           <h2 class="index-content-title">Фотогалерея</h2>
           <div class="gallery">
             <figure class="gallery-content">
-              <img src="img/photo-1.jpg" width="286" height="164" alt="">
+              <img src="img/photo-gallery.jpg"  alt=""  width="328"  height="164">
             </figure>
-            <button class="btn gallery-prev">Назад</button>
+            <button class="btn gallery-prev" disabled>Назад</button>
             <button class="btn gallery-next">Вперёд</button>
           </div>
         </div>
       </div>
-      <div class="index-content">
+      <div class="index-content clearfix">
         <div class="index-content-left">
           <h2 class="index-content-title">Контактная информация</h2>
           <p>
@@ -88,7 +92,7 @@
             пн — пт: с 10:00 до 22:00<br>
             сб — вс: с 10:00 до 19:00
           </p>
-          <a class="btn" href="#">Как проехать</a>
+          <a class="btn js-open-map" href="#">Как проехать</a>
           <a class="btn" href="#">Обратная связь</a>
         </div>
         <div class="index-content-right">
@@ -103,9 +107,9 @@
           </form>
         </div>
       </div>
-    </main>
+    </div>
     <footer class="main-footer">
-      <div class="container">
+      <div class="container clearfix">
         <section class="footer-contacts">
           Барбершоп «Бородинский»<br>
           Адрес: г. Санкт-Петербург, Б. Конюшенная, д. 19/8<br>
@@ -124,5 +128,31 @@
         </section>
       </div>
     </footer>
+    <div class="modal-content">
+      <button class="modal-content-close" type="button" title="Закрыть" >Закрыть</button>
+      <h2 class="modal-content-title">Личный кабинет</h2>
+      <p>Введите пожалуйста свой логин и пароль.</p>
+      <form action="#" class="login-form" method="post">
+        <input type="text" class="icon-user" name="login" placeholder="Логин">
+        <input type="password" class="icon-password" name="password" placeholder="Пароль">
+        <label class="login-checkbox">
+          <input type="checkbox" name="remember">
+          <span class="checkbox-indicator"></span>
+          Запомните меня
+        </label>
+        <a href="#" class="restore">Я забыл свой пароль</a>
+        <button class="btn" type="submit">Войти</button>
+      </form>
+    </div>
+    <div class="modal-content-map">
+      <button class="modal-content-close" type="button" title="Закрыть">Закрыть</button>
+
+      <div id="ya-map">
+        <!-- <script type="text/javascript" charset="utf-8" src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=nqsxI-_KnNtn5-xRCKilfCmsl31hkWe1&width=766&height=561&lang=ru_RU&sourceType=constructor"></script> -->       
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2376.759903948126!2d30.321301983387688!3d59.938631929056484!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1457343940231" width="766" height="561" frameborder="0" style="border:0" allowfullscreen></iframe>
+      </div>
+      <!-- <div class="modal-overlay"></div> -->
+    </div>
+    <script src="js/script.js"></script>
   </body>
 </html>
